@@ -4,14 +4,20 @@
 
 .sidenav {
   width: 200px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
 }
 
-.sidenav .mat-toolbar {
-  background: inherit;
+.sidenav-content{
+  overflow: hidden;
 }
 
-.mat-toolbar.mat-primary {
-  position: sticky;
+.sidenav-content.handset{
+  padding-top: 64px;
+}
+
+.toolbar{
+  position: absolute;
   top: 0;
-  z-index: 1;
+  height: 64px;
+  width: 100%;
 }
