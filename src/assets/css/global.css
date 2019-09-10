@@ -8,6 +8,8 @@
     margin-top: 0;
     padding: 30px 40px;
     text-transform: uppercase;
-    background-color: #008073;
-    color: #ffffff;
+}
+
+.theme-picker .mat-menu-content:not(:empty) {
+    padding: 8px;
 }

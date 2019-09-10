@@ -1,0 +1,16 @@
+<mat-grid-list cols="2" rowHeight="1:1">
+    <mat-grid-tile>
+        <div mat-menu-item role="menuitem" tabindex="0" aria-disabled="false" (click)="setTheme('light')">
+            <div class="theme-picker-swatch">
+                <div class="theme-picker-color light"></div>
+            </div>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <div mat-menu-item role="menuitem" tabindex="0" aria-disabled="false" (click)="setTheme('dark')">
+            <div class="theme-picker-swatch">
+                <div class="theme-picker-color dark"></div>
+            </div>
+        </div>
+    </mat-grid-tile>
+</mat-grid-list>

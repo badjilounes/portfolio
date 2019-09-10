@@ -1,31 +1,24 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { AboutComponent } from './components/content/about/about.component';
+import { AwardsComponent } from './components/content/awards/awards.component';
+import { ContactComponent } from './components/content/contact/contact.component';
+import { ContentComponent } from './components/content/content.component';
+import { EducationComponent } from './components/content/education/education.component';
+import { ExperienceComponent } from './components/content/experience/experience.component';
+import { HomeComponent } from './components/content/home/home.component';
+import { ProjectsComponent } from './components/content/projects/projects.component';
+import { SkillsComponent } from './components/content/skills/skills.component';
+import { ScrollSpyDirective } from './directives/scroll-spy.directive';
 import { MaterialModule } from './material.module';
-import { NavigationComponent } from './navigation/navigation.component';
-import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatIconModule } from '@angular/material/icon';
-import { MatListModule } from '@angular/material/list';
-import { ToolbarComponent } from './toolbar/toolbar.component';
-import { MenuComponent } from './menu/menu.component';
-import { ContentComponent } from './content/content.component';
-import { HomeComponent } from './content/home/home.component';
-import { AboutComponent } from './content/about/about.component';
-import { ExperienceComponent } from './content/experience/experience.component';
-import { ProjectsComponent } from './content/projects/projects.component';
-import { SkillsComponent } from './content/skills/skills.component';
-import { AwardsComponent } from './content/awards/awards.component';
-import { EducationComponent } from './content/education/education.component';
-import { ContactComponent } from './content/contact/contact.component';
-import { ScrollSpyDirective } from './directive/scroll-spy.directive';
-
+import { MenuComponent } from './components/menu/menu.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { ThemeService } from './services/theme.service';
+import { ThemeSelectorComponent } from './components/theme-selector/theme-selector.component';
 
 @NgModule({
   declarations: [
@@ -42,21 +35,16 @@ import { ScrollSpyDirective } from './directive/scroll-spy.directive';
     AwardsComponent,
     EducationComponent,
     ContactComponent,
-    ScrollSpyDirective
+    ScrollSpyDirective,
+    ThemeSelectorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
   ],
-  providers: [],
+  providers: [ThemeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

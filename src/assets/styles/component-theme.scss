@@ -1,0 +1,5 @@
+@import '../../app/components/theme-selector/theme-selector.component';
+
+@mixin component-theme($light-theme, $dark-theme){
+    @include picker-theme($light-theme, $dark-theme);
+}

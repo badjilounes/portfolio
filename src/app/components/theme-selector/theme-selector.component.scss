@@ -1,0 +1,36 @@
+
+@import '~@angular/material/theming';
+
+@mixin picker-theme($light-palette, $dark-palette){
+
+    $light-background: mat-color($light-palette, 800);
+    $dark-background: mat-color($dark-palette, 800);
+
+    .theme-picker-color{
+        height: 100%;
+        width: 100%;
+
+        &.light{
+            background-color: $light-background;
+        }
+    
+        &.dark{
+            background-color: $dark-background;
+        }
+    }
+}
+
+.mat-menu-item{
+    padding: 0;
+}
+
+.theme-picker-swatch{
+    position: relative;
+    width: 36px;
+    height: 36px;
+    margin: 6px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+
