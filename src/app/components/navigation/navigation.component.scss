@@ -10,19 +10,24 @@
 }
 
 .sidenav-content{
-  overflow: hidden;
   background: url('~/assets/img/bg.png') repeat;
-}
-
-.sidenav-content.handset{
-  padding-top: 64px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
 }
 
 .toolbar{
-  position: absolute;
-  top: 0;
+  position: relative;
   height: 64px;
-  width: 100%;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 0 auto;
 }
 
 .mat-app-background{

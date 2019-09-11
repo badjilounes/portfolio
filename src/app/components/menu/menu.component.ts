@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 
@@ -12,6 +12,8 @@ export class MenuComponent implements OnInit {
   @Input() links = [];
   @Input() exportLinks = [];
   @Input() isHandset = false;
+
+  @Output() menuClosed: EventEmitter<void> = new EventEmitter<void>();
 
   selected: Observable<string>;
 

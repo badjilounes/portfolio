@@ -10,7 +10,8 @@
     <a mat-list-item *ngFor="let link of links" 
         [href]="'#' + link.anchor"
         [ngClass]="{'selected': (selected| async) === link.anchor}"
-        [style.border-color]="link.color">
+        [style.border-color]="link.color"
+        (click)="isHandset ? menuClosed.emit() : true">
         <div class="item-border" *ngIf="(selected| async) === link.anchor"
             [style.background-color]="link.color"></div>
         <mat-icon [style.color]="link.color">{{ link.icon }}</mat-icon>

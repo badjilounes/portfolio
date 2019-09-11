@@ -4,13 +4,15 @@
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
     <app-menu [isHandset]="isHandset$| async"
-              [links]="headings" [exportLinks]="exportHeadings"></app-menu>
+              [links]="headings" 
+              [exportLinks]="exportHeadings"
+              (menuClosed)="drawer.close()"></app-menu>
   </mat-sidenav>
-  <mat-sidenav-content class="sidenav-content" [ngClass]="{'handset': (isHandset$ | async)}">
+  <mat-sidenav-content class="sidenav-content">
     <app-toolbar class="toolbar" 
         *ngIf="(isHandset$ | async)" 
         (sidenavToggled)="drawer.toggle()"></app-toolbar>
     <!-- Add Content Here -->
-    <app-content></app-content>
+    <app-content class="content"></app-content>
   </mat-sidenav-content>
 </mat-sidenav-container>
