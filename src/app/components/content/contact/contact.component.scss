@@ -1,0 +1,26 @@
+$contact-bloc-height: 55.5px;
+
+
+.contact-container{
+    display: flex;
+
+    .contact-icon-container{
+        height: $contact-bloc-height;
+        width: $contact-bloc-height;
+    }
+
+}
+
+.contact-container:not(.handset){
+    flex-direction: row;
+
+    .contact-text-container{
+        padding-left: 20px;
+        height: $contact-bloc-height;
+        line-height: $contact-bloc-height;
+    }
+}
+
+.contact-container.handset{
+    flex-direction: column;
+}

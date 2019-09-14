@@ -1,0 +1,16 @@
+<mat-grid-list cols="2" rowHeight="1:1">
+    <mat-grid-tile>
+        <div mat-menu-item role="menuitem" tabindex="0" aria-disabled="false" (click)="setLanguage('fr')">
+            <div class="lang-picker-swatch">
+                <img [src]="'/assets/img/fr.svg'"/>
+            </div>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <div mat-menu-item role="menuitem" tabindex="0" aria-disabled="false" (click)="setLanguage('en')">
+            <div class="lang-picker-swatch">
+                <img [src]="'/assets/img/en.svg'"/>
+            </div>
+        </div>
+    </mat-grid-tile>
+</mat-grid-list>

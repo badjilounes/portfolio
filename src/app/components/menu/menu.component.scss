@@ -66,13 +66,19 @@
 
             ::ng-deep {
                 .mat-list-item-content{
-                    width: 100%
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
                 }
             }
 
-            .icon-button-container{
-                position: absolute;
-                right: 0;
+            .mat-icon{
+                padding: 0 8px;
+            }
+
+            div:last-of-type{
+                margin-right: 8px;
             }
         }
 

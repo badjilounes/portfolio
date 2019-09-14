@@ -1,3 +1,13 @@
+section{
+    min-height: 100vh;
+}
+
+.section-container{
+    padding: 0 1.5rem;
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
 .mat-toolbar-single-row.content-toolbar{
     height: 108px;
     font-size: 2.92rem;
@@ -10,6 +20,7 @@
     text-transform: uppercase;
 }
 
-.theme-picker .mat-menu-content:not(:empty) {
+.grid-picker .mat-menu-content:not(:empty) {
     padding: 8px;
 }
+

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-content',
@@ -8,10 +8,31 @@ import { Router } from '@angular/router';
 })
 export class ContentComponent {
 
-  constructor(private readonly router: Router) { }
+  currentFragment = '';
+
+  constructor(private readonly router: Router, private readonly route: ActivatedRoute) {
+    this.route.fragment.subscribe(fragment => this.onUriChange(fragment));
+  }
 
   onSectionChange(fragment: string): void {
+    this.currentFragment = fragment;
     this.router.navigate(['/'], {fragment});
+    console.log('navigating')
+  }
+
+  onUriChange(fragment: string): void {
+    // console.log('new fragment :', fragment);
+    // console.log('current fragment :', this.currentFragment);
+
+    // if (this.currentFragment !== fragment) {
+    //   this.currentFragment = fragment;
+    //   const element: HTMLElement = document.getElementById(fragment) as HTMLElement;
+    //   console.log(element);
+    //   if (!!element) {
+    //     element.scrollIntoView();
+    //   }
+    // }
+    
   }
 
 }

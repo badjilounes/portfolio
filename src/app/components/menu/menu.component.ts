@@ -23,4 +23,16 @@ export class MenuComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  scrollTo(anchor: string): void {
+    if (this.isHandset) {
+      this.menuClosed.emit();
+    }
+
+    const element = document.getElementById(anchor);
+    if (!!element) {
+      element.scrollIntoView({behavior: 'smooth'});
+    }
+  }
+
 }

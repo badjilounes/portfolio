@@ -19,6 +19,14 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { ThemeService } from './services/theme.service';
 import { ThemeSelectorComponent } from './components/theme-selector/theme-selector.component';
+import { LanguageSelectorComponent } from './components/language-selector/language-selector.component';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -36,13 +44,22 @@ import { ThemeSelectorComponent } from './components/theme-selector/theme-select
     EducationComponent,
     ContactComponent,
     ScrollSpyDirective,
-    ThemeSelectorComponent
+    ThemeSelectorComponent,
+    LanguageSelectorComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+        loader: {
+            provide: TranslateLoader,
+            useFactory: (createTranslateLoader),
+            deps: [HttpClient]
+        }
+    }),
     MaterialModule,
+    AppRoutingModule,
   ],
   providers: [ThemeService],
   bootstrap: [AppComponent]

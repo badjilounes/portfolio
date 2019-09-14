@@ -10,15 +10,23 @@
 
     <span class="title-container">
         <p class="title">Lounès Badji</p>
-        <p class="subtitle">Full-stack developer</p>
+        <p class="subtitle">{{'job'| translate}}</p>
     </span>
+
+    <a mat-icon-button aria-label="Language selector" [matMenuTriggerFor]="langMenu">
+        <mat-icon>language</mat-icon>
+    </a>
 
     <a mat-icon-button aria-label="Theme selector" [matMenuTriggerFor]="themeMenu">
         <mat-icon>color_lens</mat-icon>
     </a>
 
-    <mat-menu #themeMenu="matMenu" [class]="'theme-picker'">
-        <app-theme-selector></app-theme-selector>
-    </mat-menu>
-
 </mat-toolbar>
+
+<mat-menu #langMenu="matMenu" [class]="'grid-picker'">
+    <app-language-selector></app-language-selector>
+</mat-menu>
+
+<mat-menu #themeMenu="matMenu" [class]="'grid-picker'">
+    <app-theme-selector></app-theme-selector>
+</mat-menu>

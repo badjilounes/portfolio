@@ -7,6 +7,10 @@
     top: 0;
     z-index: 1;
     text-align: center;
+
+    a:last-of-type{
+        margin-left: 8px;
+    }
 }
 
 .mat-toolbar .title-container{
