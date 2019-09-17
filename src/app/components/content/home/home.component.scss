@@ -1,0 +1,51 @@
+@import '~@angular/material/theming';
+
+.home-section{
+    background: url('~/assets/img/home-bg.jpg') no-repeat top center/cover;
+    position: relative;
+
+    .overlay{
+        background-color: rgba(0, 0, 0, 0.4);
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+    
+    .section-container{
+        font-weight: 200;
+        left: 0;
+        position: absolute;
+        top: 0;
+        color: white;
+    
+        h2{
+            font-size: 3.56rem;
+            line-height: 3.916rem;
+            margin: 1.78rem 0 1.424rem 0;
+        }
+    
+        *:not(span) {
+            font-weight: 300;
+            line-height: 150%;
+            padding: 0 30px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+        }
+    }
+}
+
+
+
+@mixin home-widget($theme){
+    $color: mat-color($theme, 500);
+
+    .primary-underlined{
+        border-bottom: 5px solid $color;
+    }
+
+    .primary-tealed{
+        background-color: $color;
+        padding: 0 10px;
+    }
+}
