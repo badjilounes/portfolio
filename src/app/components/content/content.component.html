@@ -3,7 +3,8 @@
     <div scrollSpy class="scroll-container"
         [spiedTags]="['APP-HOME', 'APP-ABOUT', 'APP-EXPERIENCE', 'APP-PROJECTS', 'APP-SKILLS', 'APP-AWARDS', 'APP-EDUCATION', 'APP-CONTACT']" 
         (sectionChange)="onSectionChange($event)"
-        [style.height.px]="container.clientHeight"> 
+        [style.height.px]="container.clientHeight"
+        [style.width.px]="container.clientWidth"> 
         
         <app-home id="home" class="section"></app-home>
     

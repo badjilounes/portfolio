@@ -23,6 +23,8 @@ import { LanguageSelectorComponent } from './components/language-selector/langua
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { MatIconRegistry, MatIconModule } from '@angular/material';
+import { DomSanitizer } from '@angular/platform-browser';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -58,10 +60,18 @@ export function createTranslateLoader(http: HttpClient) {
             deps: [HttpClient]
         }
     }),
+    MatIconModule,
     MaterialModule,
     AppRoutingModule,
   ],
   providers: [ThemeService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor(matIconRegistry: MatIconRegistry, domSanitizer: DomSanitizer){
+    const linkedinIcon = domSanitizer.bypassSecurityTrustResourceUrl('./assets/mdi-icons/linkedin.svg');
+    const githubIcon = domSanitizer.bypassSecurityTrustResourceUrl('./assets/mdi-icons/github.svg')
+    matIconRegistry.addSvgIcon('linkedin', linkedinIcon);
+    matIconRegistry.addSvgIcon('github', githubIcon);
+  }
+}

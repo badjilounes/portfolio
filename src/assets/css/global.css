@@ -1,11 +1,7 @@
 section{
-    min-height: 100vh;
-}
-
-.section-container{
-    padding: 0 1.5rem;
-    margin: 0 auto;
-    max-width: 1280px;
+    padding-bottom: 30px;
+    padding-top: 0;
+    position: relative;
 }
 
 .mat-toolbar-single-row.content-toolbar{
@@ -24,3 +20,13 @@ section{
     padding: 8px;
 }
 
+.full-height {
+    height: 100vh;
+}
+
+@media only screen and (max-width: 991px)
+{
+    .mat-toolbar-single-row.content-toolbar{
+        padding: 10px 15px;
+    }
+}

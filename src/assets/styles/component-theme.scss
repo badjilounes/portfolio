@@ -1,10 +1,12 @@
 @import '../../app/components/theme-selector/theme-selector.component';
 @import '../../app/components/content/home/home.component';
+@import '../../app/components/content/about/about.component';
 
 @mixin component-theme($light-palette, $dark-palette){
     @include picker-theme($light-palette, $dark-palette);
 }
 
-@mixin text-theme($palette) {
-    @include home-widget($palette);
+@mixin text-theme($primary-palette, $accent-palette) {
+    @include home-widget($primary-palette);
+    @include about-widget($primary-palette, $accent-palette);
 }

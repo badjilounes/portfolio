@@ -1,5 +1,12 @@
 {
     "about": "about",
+    "about.current-focus":"Current Focus",
+    "about.link1": "Accessibility",
+    "about.link2": "Angular",
+    "about.link3": "Design Systems",
+    "about.paragraph1":"I’ve always sought out opportunities and challenges that are meaningful to me. Although my professional path has taken many twists and turns — from a startup employee to micro business owner and entrepreneur — I've never stopped engaging my passion to help others and solve problems.",
+    "about.paragraph2":"As a software engineer, I enjoy using my obsessive attention to detail, my unequivocal love for making things, and my mission-driven work ethic to literally change the world. That's why I’m excited to make a big impact at a high growth company.",
+    "about.title": "Mission-driven full stack developer with a passion for thoughtful UI design, collaboration, and teaching.",
     "awards": "awards",
     "contact": "contact",
     "education": "education",

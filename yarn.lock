@@ -309,6 +309,11 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@mdi/angular-material@^4.4.95":
+  version "4.4.95"
+  resolved "https://registry.yarnpkg.com/@mdi/angular-material/-/angular-material-4.4.95.tgz#0efd90971f12882a0e32a1f13960b9228515072d"
+  integrity sha512-WegEz+DtBlsI6Kxq2BSFa/r+teZJHuP4adq/MB+Rurp8xDg0yaoDnG4bh4GY8I+1nl7kY53BSpOTH67ak0qtQA==
+
 "@ngtools/webpack@8.2.2":
   version "8.2.2"
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-8.2.2.tgz#61ba246ba4aff5e03daa0abea76947647b0da25e"
