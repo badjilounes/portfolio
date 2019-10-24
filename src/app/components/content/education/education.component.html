@@ -1,4 +1,18 @@
 <section>
     <mat-toolbar class="content-toolbar" color="primary">{{'education'| translate}}</mat-toolbar>
+
+    <div class="section-container">
+        <div class="card-container">
+            <mat-card *ngFor="let item of items">
+                <mat-card-title>{{item.title | translate}}</mat-card-title>
+                <mat-card-subtitle>{{item.location | translate}}</mat-card-subtitle>
+                <mat-card-content>
+                    <ul>
+                        <li *ngFor="let desc of item.descriptions">{{desc | translate}}</li>
+                    </ul>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
 </section>
 

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -9,6 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class ContentComponent {
 
   currentFragment = '';
+  @Input() isHandset = false;
 
   constructor(private readonly router: Router, private readonly route: ActivatedRoute) {
     this.route.fragment.subscribe(fragment => this.onUriChange(fragment));

@@ -21,7 +21,6 @@ export class NavigationComponent implements OnInit {
     { title: 'experience', icon: 'trending_up', anchor: 'experience', color: '#00bcd4'},
     { title: 'projects', icon: 'web', anchor: 'projects', color: '#3f51b5'},
     { title: 'skills', icon: 'equalizer', anchor: 'skills', color: '#9c27b0'},
-    { title: 'awards', icon: 'star', anchor: 'awards', color: '#F44336'},
     { title: 'education', icon: 'school', anchor: 'education', color: '#ff9800'},
     { title: 'contact', icon: 'mail', anchor: 'contact', color: '#795548'}
   ];

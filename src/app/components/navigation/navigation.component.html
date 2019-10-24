@@ -13,6 +13,6 @@
         *ngIf="(isHandset$ | async)" 
         (sidenavToggled)="drawer.toggle()"></app-toolbar>
     <!-- Add Content Here -->
-    <app-content class="content"></app-content>
+    <app-content class="content" [isHandset]="isHandset$| async"></app-content>
   </mat-sidenav-content>
 </mat-sidenav-container>

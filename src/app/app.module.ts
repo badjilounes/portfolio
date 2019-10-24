@@ -4,7 +4,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './components/content/about/about.component';
-import { AwardsComponent } from './components/content/awards/awards.component';
 import { ContactComponent } from './components/content/contact/contact.component';
 import { ContentComponent } from './components/content/content.component';
 import { EducationComponent } from './components/content/education/education.component';
@@ -42,7 +41,6 @@ export function createTranslateLoader(http: HttpClient) {
     ExperienceComponent,
     ProjectsComponent,
     SkillsComponent,
-    AwardsComponent,
     EducationComponent,
     ContactComponent,
     ScrollSpyDirective,
@@ -70,7 +68,9 @@ export function createTranslateLoader(http: HttpClient) {
 export class AppModule { 
   constructor(matIconRegistry: MatIconRegistry, domSanitizer: DomSanitizer){
     const linkedinIcon = domSanitizer.bypassSecurityTrustResourceUrl('./assets/mdi-icons/linkedin.svg');
-    const githubIcon = domSanitizer.bypassSecurityTrustResourceUrl('./assets/mdi-icons/github.svg')
+    const githubIcon = domSanitizer.bypassSecurityTrustResourceUrl('./assets/mdi-icons/github.svg');
+    const mailIcon = domSanitizer.bypassSecurityTrustResourceUrl('./assets/mdi-icons/mail.svg');
+    matIconRegistry.addSvgIcon('mail', mailIcon);
     matIconRegistry.addSvgIcon('linkedin', linkedinIcon);
     matIconRegistry.addSvgIcon('github', githubIcon);
   }

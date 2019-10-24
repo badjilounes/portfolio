@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 @Component({
@@ -8,7 +8,13 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 })
 export class ContactComponent implements OnInit {
 
-  isHandset = false;
+  @Input() isHandset = false;
+  
+  contacts = [
+    {iconName: 'mail', link: 'lounesbadji@gmail.com', mail: true},
+    {iconName: 'github', link: 'https://github.com/badjilounes'},
+    {iconName: 'linkedin', link: 'https://www.linkedin.com/in/lounes-badji-01b550104/'},
+  ]
 
   constructor(breakpointObserver: BreakpointObserver) {
     breakpointObserver.observe([Breakpoints.Handset]).subscribe(result => this.isHandset = result.matches);

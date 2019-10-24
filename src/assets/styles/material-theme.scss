@@ -11,16 +11,18 @@ $theme: mat-light-theme($primary, $accent, $warn);
 
 @include angular-material-theme($theme);
 @include component-theme($green-palette, $black-palette);
+@include card-theme($primary, $accent);
 @include text-theme($green-palette, $brown-palette);
 
 .dark-theme {
     color: $light-primary-text;
     $dark-primary: mat-palette($black-palette);    
-    $dark-accent: mat-palette($mat-amber, A400, A100, A700);
+    $dark-accent: mat-palette($mat-light-blue, A400, A100, A700);
     $dark-warn: mat-palette($mat-red);
     $dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
 
     @include angular-material-theme($dark-theme);
     @include component-theme($green-palette, $black-palette);
-    @include text-theme($black-palette, $red-palette);
+    @include card-theme($dark-accent, $mat-grey);
+    @include text-theme($dark-primary, $dark-accent);
 }

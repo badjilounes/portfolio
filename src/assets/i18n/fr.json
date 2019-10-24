@@ -10,6 +10,15 @@
     "awards": "récompenses",
     "contact": "contact",
     "education": "formation",
+    "education.engineer-school": "École d'ingénieur CPE Lyon",
+    "education.engineer-location": "Campus LyonTech la Doua",
+    "education.engineer-serie": "Électronique télécommunication de l'information",
+    "education.engineer-speciality": "Informatique du web et des objets communicants",
+    "education.prepa": "Classes préparatoires associées CPE Lyon",
+    "education.prepa-location": "Institution des Chartreux",
+    "education.prepa-speciality": "Spécialité Mathématiques",
+    "education.bac": "Baccalauréat série scientifique",
+    "education.highschool-location": "Lycée Saint-Just",
     "experience": "expérience",
     "home.heading-first": "Je veux",
     "home.heading-second": "qui",
@@ -18,5 +27,10 @@
     "job": "Développeur full stack",
     "projects": "projets",
     "resume": "CV",
-    "skills": "compétences"
+    "skills": "compétences",
+    "skills.back": "Back-end",
+    "skills.css": "CSS",
+    "skills.build": "Build",   
+    "skills.front": "Front-end",
+    "skills.other": "Autre"
 }
