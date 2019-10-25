@@ -26,7 +26,7 @@ export class NavigationComponent implements OnInit {
   ];
 
   exportHeadings = [
-    { title: 'resume', icon: 'description', link: 'http://badjilounes.herokuapp.com'}
+    { title: 'resume', icon: 'description', link: 'assets/resume.pdf'}
   ];
 
   theme:  Observable<'dark' | 'light'>;
