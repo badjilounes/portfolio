@@ -1,12 +1,27 @@
-<section>
+<section class="experience-section">
     <mat-toolbar class="content-toolbar" color="primary">{{'experience'| translate}}</mat-toolbar>
 
     <div class="section-container">
-        <mat-card></mat-card>
-
-        <mat-card></mat-card>
-    
-        <mat-card></mat-card>
+        <mat-card *ngFor="let item of items" [ngClass]="{'handset': (isHandset$ | async)}">
+            <mat-card-title>
+                <div class="img-container">
+                    <img [src]="'assets/img/experience/' + item.logo + '.png'"/>    
+                </div>
+                <div class="company-name" *ngIf="!(isHandset$ | async)">{{item.companyName}}</div>
+                <div class="job" *ngIf="!(isHandset$ | async)">{{item.job | translate}}</div>
+            </mat-card-title>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <div class="job" *ngIf="(isHandset$ | async)">{{item.job | translate}}</div>
+                <div class="company-description"><em>{{item.companyDescription | translate}}</em></div>
+                <ul>
+                    <li class="task" *ngFor="let task of item.tasks">{{task | translate}}</li>
+                </ul>
+            </mat-card-content>
+            <mat-card-actions>
+                <span>test</span>
+            </mat-card-actions>
+        </mat-card>
     </div>
     
 </section>

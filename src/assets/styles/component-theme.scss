@@ -3,6 +3,7 @@
 @import '../../app/components/content/about/about.component';
 @import '../../app/components/content/contact/contact.component';
 @import '../../app/components/content/education/education.component';
+@import '../../app/components/content/experience/experience.component';
 
 @mixin component-theme($light-palette, $dark-palette){
     @include picker-theme($light-palette, $dark-palette);
@@ -10,6 +11,7 @@
 
 @mixin card-theme($primary-palette, $accent-palette) {
     @include education-widget($primary-palette, $accent-palette);
+    @include experience-widget($primary-palette, $accent-palette);
 }
 
 @mixin text-theme($primary-palette, $accent-palette) {
