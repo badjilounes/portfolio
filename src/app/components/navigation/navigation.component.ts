@@ -2,7 +2,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { ThemeService } from 'src/app/services/theme.service';
+import { ThemeService } from 'src/app/services/theme/theme.service';
 
 @Component({
   selector: 'app-navigation',
@@ -31,7 +31,7 @@ export class NavigationComponent implements OnInit {
 
   theme:  Observable<'dark' | 'light'>;
 
-  constructor(private readonly breakpointObserver: BreakpointObserver, private themeService: ThemeService) {}
+  constructor(private readonly breakpointObserver: BreakpointObserver, private themeService: ThemeService,) {}
 
   ngOnInit() {
     this.theme = this.themeService.theme;
@@ -40,5 +40,4 @@ export class NavigationComponent implements OnInit {
   toggleTheme(theme: 'dark'|'light'): void {
     this.themeService.setTheme(theme);
   }
-
 }

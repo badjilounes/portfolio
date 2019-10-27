@@ -9,9 +9,9 @@
     @include picker-theme($light-palette, $dark-palette);
 }
 
-@mixin card-theme($primary-palette, $accent-palette) {
+@mixin card-theme($primary-palette, $accent-palette, $other-palette) {
     @include education-widget($primary-palette, $accent-palette);
-    @include experience-widget($primary-palette, $accent-palette);
+    @include experience-widget($primary-palette, $accent-palette, $other-palette);
 }
 
 @mixin text-theme($primary-palette, $accent-palette) {

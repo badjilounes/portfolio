@@ -2,6 +2,10 @@
     .mat-card{
         margin-bottom: 60px;
         padding: 20px 0 0 0;
+
+        .mat-divider{
+            position: relative;
+        }
     
         .mat-card-title{
             padding: 0 20px;
@@ -9,6 +13,10 @@
     
         .mat-card-content{
             padding: 0 20px;
+
+            ul{
+                margin-top: 1em;
+            }
         }
     
         .mat-card-actions{
@@ -114,15 +122,27 @@
 }
 
 
-@mixin experience-widget($primary-palette, $accent-palette) {
-    $primary-color: mat-color($primary-palette, 500);
-    $accent-color: mat-color($accent-palette, 500);
+@mixin experience-widget($company-name-palette, $job-palette, $company-desc-palette) {
+    $company-name-color: mat-color($company-name-palette, 500);
+    $company-desc-color: mat-color($company-desc-palette, 500);
+    $job-color: mat-color($job-palette, 500);
+    $card-actions-bg: mat-color($company-desc-palette, 100);
+    $card-actions-color: mat-color($company-desc-palette, 800);
 
     .company-name{
-        color: $primary-color;
+        color: $company-name-color;
+    }
+
+    .company-description{
+        color: $company-desc-color;
     }
 
     .job{
-        color: $accent-color
+        color: $job-color;
+    }
+
+    .mat-card-actions{
+        background-color: $card-actions-bg;
+        color: $card-actions-color;
     }
 }

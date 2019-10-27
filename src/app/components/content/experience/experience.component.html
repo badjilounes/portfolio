@@ -19,7 +19,7 @@
                 </ul>
             </mat-card-content>
             <mat-card-actions>
-                <span>test</span>
+                <span>{{item.dates.start | date: "MMM yyyy" : undefined : (locale| async)}} - {{item.dates.end | date: "MMM yyyy" : undefined : (locale| async)}} | {{item.location}}</span>
             </mat-card-actions>
         </mat-card>
     </div>
