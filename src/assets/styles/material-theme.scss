@@ -11,7 +11,7 @@ $theme: mat-light-theme($primary, $accent, $warn);
 
 @include angular-material-theme($theme);
 @include component-theme($green-palette, $black-palette);
-@include card-theme($primary, $accent, $mat-grey);
+@include card-theme($primary, $accent, $mat-grey, $mat-light-theme-background);
 @include text-theme($green-palette, $brown-palette);
 
 .dark-theme {
@@ -23,6 +23,6 @@ $theme: mat-light-theme($primary, $accent, $warn);
 
     @include angular-material-theme($dark-theme);
     @include component-theme($green-palette, $black-palette);
-    @include card-theme($dark-accent, $mat-grey, $mat-grey);
+    @include card-theme($dark-accent, $mat-grey, $mat-grey, $mat-dark-theme-background);
     @include text-theme($dark-primary, $dark-accent);
 }

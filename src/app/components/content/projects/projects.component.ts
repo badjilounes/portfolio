@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
 
+  items = [
+    {poster: 'assets/img/projects/blabla-movie.png', name: 'Blabla movie'},
+    {poster: 'assets/img/projects/blabla-movie.png', name: 'Blabla movie'},
+    {poster: 'assets/img/projects/blabla-movie.png', name: 'Blabla movie'}
+  ]
+
   constructor() { }
 
   ngOnInit() {

@@ -3,10 +3,24 @@
 
     <div class="section-container">
 
-        <mat-card>
-            <mat-card-title>{{'comming-soon' | translate}}</mat-card-title>
-        </mat-card>
+        <mat-card *ngFor="let item of items">
+            <img mat-card-image [src]="item.poster" alt="Photo of blabla movie" height="240px">
+            <mat-card-content>
+                <div class="project-title-container">
+                    <div class="project-title">{{item.name}}</div>
+                    <button mat-icon-button aria-label="button see more information" (click)="desc.style.display = 'block'; desc.style.top = '0';">
+                        <mat-icon>more_vert</mat-icon>
+                    </button>
+                </div>
+            </mat-card-content>
 
+            <div class="project-card-description" style="display: none; top: 250px" #desc>
+                <button mat-icon-button aria-label="button close information" (click)="desc.style.top = '250px'; desc.style.display = 'none'; ">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </div>
+        </mat-card>
+        
     </div>
 
 </section>
