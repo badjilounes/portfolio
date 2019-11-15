@@ -12,12 +12,31 @@
                         <mat-icon>more_vert</mat-icon>
                     </button>
                 </div>
+                <div class="project-description-text">{{item.descriptionTxt |translate}}</div>
             </mat-card-content>
 
             <div class="project-card-description" style="display: none; top: 250px" #desc>
-                <button mat-icon-button aria-label="button close information" (click)="desc.style.top = '250px'; desc.style.display = 'none'; ">
-                    <mat-icon>close</mat-icon>
-                </button>
+                <div class="project-description-title">
+                    <div class="description-title">{{'projects.description.title' | translate}}</div>
+                    <button mat-icon-button aria-label="button close information" (click)="desc.style.top = '250px'; desc.style.display = 'none'; ">
+                        <mat-icon>close</mat-icon>
+                    </button>    
+                </div>
+                
+                <div class="description-list">
+                    <ul>
+                        <li *ngFor="let description of item.description">{{description}}</li>
+                    </ul>
+                </div>
+
+                <div class="description-action">
+                    <a mat-mini-fab [href]="item.links.online" target="_blank">
+                        <mat-icon>open_in_new</mat-icon>
+                    </a>
+                    <a mat-mini-fab [href]="item.links.github" target="_blank">
+                        <mat-icon [svgIcon]="'github'"></mat-icon>
+                    </a>
+                </div>
             </div>
         </mat-card>
         

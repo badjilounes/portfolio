@@ -63,6 +63,8 @@
     "home.heading-underlined": "ont des impacts concrets",
     "job": "Développeur full stack",
     "projects": "projets",
+    "projects.description.blabla-movie": "Filmothèque avec jeu concours pour sélectionner votre film préféré",
+    "projects.description.title": "Réalisations",
     "resume": "CV",
     "skills": "compétences",
     "skills.back": "Back-end",

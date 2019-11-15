@@ -41,8 +41,11 @@
                 }
             }
 
-            .project-description{
-                line-height: 26px;
+            .project-description-text{
+                line-height: 22px;
+                font-size: 16px;
+                font-weight: normal;
+                margin-top: 16px;
             }
         }
     }
@@ -52,7 +55,57 @@
         width: 100%;
         height: 100%;
         left: 0;
-        animation: slidetop 500ms;
+        animation: slidetop 250ms;
+
+        button{
+            float: right;
+        }
+
+        .project-description-title{
+            display: flex;
+            flex-direction: row;
+
+            .description-title{
+                font-size: 24px;
+                font-weight: 300;
+                height: 36px;
+                line-height: 36px;
+                flex: 1;
+                margin: 20px 0 0 20px;
+            }
+        }
+
+        .description-list{
+            margin-top: 1em;
+            ul{
+                list-style-type: none;  
+                padding: 0 20px;
+    
+                li{
+                    list-style-type: disc;
+                    margin-left: 20px;
+                    height: 28px;
+                    line-height: 28px;
+                    font-size: 14px;
+                    margin-left: 20px;
+                }
+            }    
+        }
+
+        .description-action{
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border-top: 1px solid rgba(160,160,160,0.2);
+            padding: 20px;
+
+            a:not(:first-of-type){
+                margin-left: 20px;
+            }
+        }
     }
 }
 
@@ -80,7 +133,10 @@
 
         .project-card-description{
             background-color: $background-color;
-            color: $accent-color;
+
+            .project-description-title{
+                color: $accent-color;
+            }
         }
     }
     

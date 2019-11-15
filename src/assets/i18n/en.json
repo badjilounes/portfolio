@@ -63,6 +63,8 @@
     "home.heading-underlined": "make a difference",
     "job": "Full Stack developer",
     "projects": "projects",
+    "projects.description.blabla-movie": "Film library with contest to select your favorite movie",
+    "projects.description.title": "Accomplishments",
     "resume": "resume",
     "skills": "skills",
     "skills.back": "Back-end",
