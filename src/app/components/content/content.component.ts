@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-content',
@@ -11,29 +11,10 @@ export class ContentComponent {
   currentFragment = '';
   @Input() isHandset = false;
 
-  constructor(private readonly router: Router, private readonly route: ActivatedRoute) {
-    this.route.fragment.subscribe(fragment => this.onUriChange(fragment));
-  }
+  constructor(private readonly router: Router) {}
 
   onSectionChange(fragment: string): void {
     this.currentFragment = fragment;
     this.router.navigate(['/'], {fragment});
-    console.log('navigating')
   }
-
-  onUriChange(fragment: string): void {
-    // console.log('new fragment :', fragment);
-    // console.log('current fragment :', this.currentFragment);
-
-    // if (this.currentFragment !== fragment) {
-    //   this.currentFragment = fragment;
-    //   const element: HTMLElement = document.getElementById(fragment) as HTMLElement;
-    //   console.log(element);
-    //   if (!!element) {
-    //     element.scrollIntoView();
-    //   }
-    // }
-    
-  }
-
 }

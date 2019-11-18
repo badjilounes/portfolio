@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { LanguageService } from 'src/app/services/languauge/language.service';
+import { LocalStorage } from 'ngx-webstorage';
 
 
 @Component({
@@ -10,14 +11,15 @@ import { LanguageService } from 'src/app/services/languauge/language.service';
 })
 export class LanguageSelectorComponent implements OnInit {
 
+  @LocalStorage() appLang: 'fr-FR'|'en-US';
+
   constructor(private readonly translateSrv: TranslateService, private readonly langService: LanguageService) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
-  setLanguage(lang: 'fr'|'en'): void {
+  setLanguage(lang: 'fr-FR'|'en-US'): void {
+    this.appLang = lang;
     this.translateSrv.use(lang);
-    const localeStr = (lang === 'fr') ? 'fr-FR' : 'en-US';
-    this.langService.setLanguage(localeStr);
+    this.langService.setLanguage(lang);
   }
 }

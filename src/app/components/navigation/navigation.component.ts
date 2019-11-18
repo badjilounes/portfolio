@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { ThemeService } from 'src/app/services/theme/theme.service';
+import { PwaService } from 'src/app/services/pwa/pwa.service';
+import { LocalStorage } from 'ngx-webstorage';
 
 @Component({
   selector: 'app-navigation',
@@ -31,13 +33,13 @@ export class NavigationComponent implements OnInit {
 
   theme:  Observable<'dark' | 'light'>;
 
-  constructor(private readonly breakpointObserver: BreakpointObserver, private themeService: ThemeService,) {}
+  constructor(
+    private readonly breakpointObserver: BreakpointObserver, 
+    private readonly themeService: ThemeService,
+    private readonly pwaService: PwaService
+  ) {}
 
   ngOnInit() {
     this.theme = this.themeService.theme;
-  }
-
-  toggleTheme(theme: 'dark'|'light'): void {
-    this.themeService.setTheme(theme);
   }
 }

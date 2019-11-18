@@ -26,6 +26,10 @@ import { ScrollSpyDirective } from './directives/scroll-spy.directive';
 import { MaterialModule } from './material.module';
 import { ThemeService } from './services/theme/theme.service';
 import { LanguageService } from './services/languauge/language.service';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
+import { PwaService } from './services/pwa/pwa.service';
+import {NgxWebstorageModule} from 'ngx-webstorage';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -64,10 +68,13 @@ export function createTranslateLoader(http: HttpClient) {
     MatIconModule,
     MaterialModule,
     AppRoutingModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    NgxWebstorageModule.forRoot()
   ],
   providers: [
     ThemeService,
-    LanguageService
+    LanguageService,
+    PwaService
   ],
   bootstrap: [AppComponent]
 })
