@@ -64,6 +64,7 @@
     "job": "Développeur full stack",
     "projects": "projets",
     "projects.description.blabla-movie": "Filmothèque avec jeu concours pour sélectionner votre film préféré",
+    "projects.description.prescriber": "Inscription et authentification avec JWT",
     "projects.description.title": "Réalisations",
     "resume": "CV",
     "skills": "compétences",

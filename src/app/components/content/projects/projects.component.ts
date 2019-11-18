@@ -13,7 +13,14 @@ export class ProjectsComponent implements OnInit {
       name: 'Blabla movie', 
       description: ['Angular 6', 'Material', 'Rxjs debouncer', 'Open data api'],
       descriptionTxt: 'projects.description.blabla-movie',
-      links: {online: 'http://blablamovie.herokuapp.com', github: 'https://www.github.com/badjilounes/blabla-movie.git'}
+      links: {online: 'https://blablamovie.herokuapp.com', github: 'https://www.github.com/badjilounes/blabla-movie.git'}
+    },
+    {
+      poster: 'assets/img/projects/prescriber.png', 
+      name: 'Prescriber', 
+      description: ['Angular 8', 'Material', 'NestJS', 'Swagger', 'JWT'],
+      descriptionTxt: 'projects.description.prescriber',
+      links: {online: 'https://prescriber-front.herokuapp.com', github: 'https://www.github.com/badjilounes/exo1.git'}
     }
   ];
 
