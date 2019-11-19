@@ -68,6 +68,7 @@
     "projects.description.prescriber": "Singup and login with JWT",
     "projects.description.title": "Accomplishments",
     "pwa.install": "A mobile version of the application is available",
+    "pwa.install.ios": "A mobile version of the application is available. To install it click on \"Share\" button then \"Add to home screen\"",
     "pwa.reload": "A new version of the application is available",
     "resume": "resume",
     "skills": "skills",
