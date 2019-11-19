@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { LanguageService } from './services/languauge/language.service';
-import { ThemeService } from './services/theme/theme.service';
 import { LocalStorage } from 'ngx-webstorage';
+import { LanguageService } from './services/languauge/language.service';
 
 @Component({
   selector: 'app-root',
