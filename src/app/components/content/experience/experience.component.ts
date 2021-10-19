@@ -19,6 +19,26 @@ export class ExperienceComponent implements OnInit {
 
   items = [
     {
+      companyName: 'Kreactive', 
+      logo: 'kreactive', 
+      job: 'experience.job.kreactive',
+      companyDescription: 'experience.job.kreactive.description',
+      tasks: [
+        'experience.job.kreactive.task1',
+        'experience.job.kreactive.task2',
+        'experience.job.kreactive.task3',
+        'experience.job.kreactive.task4',
+        'experience.job.kreactive.task5',
+        'experience.job.kreactive.task6',
+        'experience.job.kreactive.task7',
+        'experience.job.kreactive.task8',
+        'experience.job.kreactive.task9',
+        'experience.job.kreactive.task10',
+      ],
+      dates: {start: '1574636400000', end: '1635721200000'},
+      location: 'Lyon'
+    },
+    {
       companyName: 'Icoges', 
       logo: 'icoges', 
       job: 'experience.job.icoges',
