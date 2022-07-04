@@ -1,0 +1,64 @@
+$contact-bloc-height: 55.5px;
+
+.contact-section{
+    padding-bottom: 0;
+
+    .contact-container{
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        display: flex;
+        text-align: center;
+
+        .mat-mini-fab{
+            height: $contact-bloc-height;
+            width: $contact-bloc-height;
+            color: white;
+    
+            ::ng-deep .mat-button-wrapper{
+                padding: 14px 0;
+            }
+        }
+
+        &.handset{
+            flex-direction: column;
+
+            .mat-mini-fab{
+                margin: 0 auto;
+            }
+        }
+
+        &:not(.handset){
+            flex-direction: row;
+
+            .mat-mini-fab{
+                margin-right: 20px;
+            }
+        }
+    }
+
+    
+}
+
+@mixin contact-widget($theme){
+    $color: mat-color($theme, 500);
+
+    .contact-link{
+        color: $color;
+    }
+
+    .contact-link{
+        text-decoration: none;
+        border-bottom: 3px solid transparent;
+        padding: 3px 0;
+        margin: 14px 0px;
+        height: 19px;
+    }
+
+    .contact-link:hover{
+        border-bottom: 3px solid $color;
+        transition: 0.4s all;
+        -moz-transition: 0.4s all;
+        -webkit-transition: 0.4s all;
+        -webkit-tap-highlight-color: transparent;
+    }
+}

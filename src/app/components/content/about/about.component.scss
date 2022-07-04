@@ -1,0 +1,45 @@
+@mixin about-widget($primary, $accent){
+    $primary-color: mat-color($primary, 500);
+    $accent-color: mat-color($accent, 500);
+
+    .about-section{
+        blockquote{
+            border-left: 5px solid $accent-color;
+            color: $accent-color;
+            font-size: 125%;
+            font-weight: 400;
+            margin: 20px 0;
+            padding-left: 1.5rem;
+    
+            h2{
+                font-weight: 400;
+                margin: 1.78rem 0 1.424rem 0;
+            }
+        }
+    
+        blockquote * {
+            font-size: inherit;
+            line-height: inherit;
+        }
+    
+        .about-paragraph{
+            text-align: justify;
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+
+        strong{
+            font-weight: 500;
+        }
+
+        a{
+            text-decoration: none;
+            color: $accent-color;
+        }
+    }
+
+   
+}

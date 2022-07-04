@@ -1,0 +1,13 @@
+<section class="contact-section full-height">
+    <mat-toolbar class="content-toolbar" color="primary">{{'contact' | translate}}</mat-toolbar>
+    
+    <div class="section-container">
+        <div class="contact-container" [ngClass]="{'handset': isHandset}" *ngFor="let contact of contacts">
+            <a mat-mini-fab [href]="contact.mail ? 'mailto:' + contact.link : contact.link">
+                <mat-icon [svgIcon]="contact.iconName"></mat-icon>
+            </a>
+            <a class="contact-link" [href]="contact.mail ? 'mailto:' + contact.link : contact.link">{{contact.link}}</a>
+        </div>
+    </div>
+
+</section>

@@ -1,0 +1,35 @@
+.mat-toolbar {
+    height: 100%;
+}
+
+.mat-toolbar.mat-primary {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    text-align: center;
+
+    a:last-of-type{
+        margin-left: 8px;
+    }
+}
+
+.mat-toolbar .title-container{
+    width: 100%;
+}
+
+.title, .subtitle{
+    height: 20px;
+    line-height: 20px;
+}
+
+.title{
+    font-size: 22px;
+}
+
+.subtitle{
+    font-size: 14px;
+}
+
+.menu-toggle{
+    position: absolute;
+}

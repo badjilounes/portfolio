@@ -1,0 +1,20 @@
+<section class="about-section">
+    <mat-toolbar class="content-toolbar" color="primary">{{'about'| translate}}</mat-toolbar>
+
+    <div class="section-container flow-text">
+        <blockquote>
+            <h2>{{'about.title'| translate}}</h2>
+        </blockquote>
+    
+        <p class="about-paragraph first">{{'about.paragraph1'| translate}}</p>
+    
+        <p class="about-paragraph second">{{'about.paragraph2'| translate}}</p>
+    
+        <p class="about-paragraph">
+            <strong>{{'about.current-focus'| translate}}</strong> : 
+            <a [href]="link1" target="_blank">{{'about.link1'| translate}}</a> // 
+            <a [href]="link2" target="_blank">{{'about.link2'| translate}}</a> // 
+            <a [href]="link3" target="_blank">{{'about.link3'| translate}}</a>
+        </p>
+    </div>
+</section>
