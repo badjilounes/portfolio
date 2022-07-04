@@ -87,6 +87,7 @@
     "install": "Install",
     "job": "Full Stack developer",
     "projects.description.blabla-movie": "Film library with contest to select your favorite movie",
+    "projects.description.dz-dialect-app": "Algerian dialectology learning app for beginners",
     "projects.description.prescriber": "Singup and login with JWT",
     "projects.description.title": "Accomplishments",
     "projects": "projects",
