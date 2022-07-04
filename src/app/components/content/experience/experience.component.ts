@@ -19,6 +19,25 @@ export class ExperienceComponent implements OnInit {
 
   items = [
     {
+      companyName: 'Agicap',
+      logo: 'agicap',
+      job: 'experience.job.agicap',
+      companyDescription: 'experience.job.agicap.description',
+      tasks: [
+        'experience.job.agicap.task1',
+        'experience.job.agicap.task2',
+        'experience.job.agicap.task3',
+        'experience.job.agicap.task4',
+        'experience.job.agicap.task5',
+        'experience.job.agicap.task6',
+        'experience.job.agicap.task7',
+        'experience.job.agicap.task8',
+        'experience.job.agicap.task9',
+      ],
+      dates: {start: '1638179500000', end: '1661935900000'},
+      location: 'Lyon'
+    },
+    {
       companyName: 'Louis Vuitton',
       logo: 'louis-vuitton',
       job: 'experience.job.louis-vuitton',
