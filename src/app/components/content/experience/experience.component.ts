@@ -19,28 +19,28 @@ export class ExperienceComponent implements OnInit {
 
   items = [
     {
-      companyName: 'Kreactive', 
-      logo: 'kreactive', 
-      job: 'experience.job.kreactive',
-      companyDescription: 'experience.job.kreactive.description',
+      companyName: 'Louis Vuitton',
+      logo: 'louis-vuitton',
+      job: 'experience.job.louis-vuitton',
+      companyDescription: 'experience.job.louis-vuitton.description',
       tasks: [
-        'experience.job.kreactive.task1',
-        'experience.job.kreactive.task2',
-        'experience.job.kreactive.task3',
-        'experience.job.kreactive.task4',
-        'experience.job.kreactive.task5',
-        'experience.job.kreactive.task6',
-        'experience.job.kreactive.task7',
-        'experience.job.kreactive.task8',
-        'experience.job.kreactive.task9',
-        'experience.job.kreactive.task10',
+        'experience.job.louis-vuitton.task1',
+        'experience.job.louis-vuitton.task2',
+        'experience.job.louis-vuitton.task3',
+        'experience.job.louis-vuitton.task4',
+        'experience.job.louis-vuitton.task5',
+        'experience.job.louis-vuitton.task6',
+        'experience.job.louis-vuitton.task7',
+        'experience.job.louis-vuitton.task8',
+        'experience.job.louis-vuitton.task9',
+        'experience.job.louis-vuitton.task10',
       ],
       dates: {start: '1574636400000', end: '1635721200000'},
       location: 'Lyon'
     },
     {
-      companyName: 'Icoges', 
-      logo: 'icoges', 
+      companyName: 'Icoges',
+      logo: 'icoges',
       job: 'experience.job.icoges',
       companyDescription: 'experience.job.icoges.description',
       tasks: [
@@ -51,8 +51,8 @@ export class ExperienceComponent implements OnInit {
       location: 'Lyon'
     },
     {
-      companyName: 'MyGladys', 
-      logo: 'mygladys', 
+      companyName: 'MyGladys',
+      logo: 'mygladys',
       job: 'experience.job.mygladys',
       companyDescription: 'experience.job.mygladys.description',
       tasks: [
@@ -70,8 +70,8 @@ export class ExperienceComponent implements OnInit {
       location: 'Lyon'
     },
     {
-      companyName: 'Silk-digital', 
-      logo: 'ubilab', 
+      companyName: 'Silk-digital',
+      logo: 'ubilab',
       job: 'experience.job.ubilab',
       companyDescription: 'experience.job.ubilab.description',
       tasks: [
@@ -90,8 +90,8 @@ export class ExperienceComponent implements OnInit {
       location: 'Lyon'
     },
     {
-      companyName: 'TrainMe', 
-      logo: 'trainme', 
+      companyName: 'TrainMe',
+      logo: 'trainme',
       job: 'experience.job.trainme',
       companyDescription: 'experience.job.trainme.description',
       tasks: [
