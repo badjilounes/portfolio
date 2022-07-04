@@ -1,3 +1,4 @@
+@use '@angular/material' as mat;
 .education-section{
     .card-container{
         display: flex;
@@ -38,8 +39,8 @@
 }
 
 @mixin education-widget($primary, $accent){
-    $primary-color: mat-color($primary, 500);
-    $accent-color: mat-color($accent, 500);
+    $primary-color: mat.get-color-from-palette($primary, 500);
+    $accent-color: mat.get-color-from-palette($accent, 500);
 
     .education-section{
         .mat-card-title{

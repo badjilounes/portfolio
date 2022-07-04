@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { LanguageService } from 'src/app/services/languauge/language.service';
-import { LocalStorage } from 'ngx-webstorage';
+import { LocalStorage } from 'src/app/services/local-storage/local-storage.decorator';
 
 
 @Component({

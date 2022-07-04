@@ -1,3 +1,4 @@
+@use '@angular/material' as mat;
 $contact-bloc-height: 55.5px;
 
 .contact-section{
@@ -40,7 +41,7 @@ $contact-bloc-height: 55.5px;
 }
 
 @mixin contact-widget($theme){
-    $color: mat-color($theme, 500);
+    $color: mat.get-color-from-palette($theme, 500);
 
     .contact-link{
         color: $color;

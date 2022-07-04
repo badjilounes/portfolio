@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LocalStorage } from 'src/app/services/local-storage/local-storage.decorator';
 import { ThemeService } from 'src/app/services/theme/theme.service';
-import { LocalStorage } from 'ngx-webstorage';
 
 @Component({
   selector: 'app-theme-selector',

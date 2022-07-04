@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { LocalStorage } from 'ngx-webstorage';
 import { LanguageService } from './services/languauge/language.service';
+import { LocalStorage } from './services/local-storage/local-storage.decorator';
 
 @Component({
   selector: 'app-root',
@@ -15,12 +15,12 @@ export class AppComponent implements OnInit {
   title = 'portfolio';
 
   constructor(
-    private readonly translateSrv: TranslateService, 
+    private readonly translateSrv: TranslateService,
     private readonly langService: LanguageService,
   ) {
-    
+
     this.translateSrv.setDefaultLang('fr');
-    
+
     if (!!this.appLang) {
       this.langService.setLanguage(this.appLang)
     } else {

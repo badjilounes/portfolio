@@ -1,4 +1,4 @@
-@import '~@angular/material/theming';
+@import '@angular/material/theming';
 
 .sidenav-container {
   height: 100%;
@@ -10,7 +10,7 @@
 }
 
 .sidenav-content{
-  background: url('~/assets/img/bg.png') repeat;
+  background: url('/assets/img/bg.png') repeat;
   display: flex;
   flex-direction: column;
   height: 100%;

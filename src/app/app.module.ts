@@ -2,7 +2,7 @@ import { registerLocaleData } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import localeFr from '@angular/common/locales/fr';
 import { NgModule, LOCALE_ID } from '@angular/core';
-import { MatIconModule, MatIconRegistry } from '@angular/material';
+import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { BrowserModule, DomSanitizer } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
@@ -29,7 +29,6 @@ import { LanguageService } from './services/languauge/language.service';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { PwaService } from './services/pwa/pwa.service';
-import {NgxWebstorageModule} from 'ngx-webstorage';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -69,7 +68,6 @@ export function createTranslateLoader(http: HttpClient) {
     MaterialModule,
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
-    NgxWebstorageModule.forRoot()
   ],
   providers: [
     ThemeService,
@@ -78,7 +76,7 @@ export function createTranslateLoader(http: HttpClient) {
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { 
+export class AppModule {
   constructor(matIconRegistry: MatIconRegistry, domSanitizer: DomSanitizer){
     const linkedinIcon = domSanitizer.bypassSecurityTrustResourceUrl('./assets/mdi-icons/linkedin.svg');
     const githubIcon = domSanitizer.bypassSecurityTrustResourceUrl('./assets/mdi-icons/github.svg');

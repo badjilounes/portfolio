@@ -1,10 +1,11 @@
+@use '@angular/material' as mat;
 
-@import '~@angular/material/theming';
+@import '@angular/material/theming';
 
 @mixin picker-theme($light-palette, $dark-palette){
 
-    $light-background: mat-color($light-palette, 800);
-    $dark-background: mat-color($dark-palette, 800);
+    $light-background: mat.get-color-from-palette($light-palette, 800);
+    $dark-background: mat.get-color-from-palette($dark-palette, 800);
 
     .theme-picker-color{
         height: 100%;

@@ -1,3 +1,4 @@
+@use '@angular/material' as mat;
 .experience-section{
     .mat-card{
         margin-bottom: 60px;
@@ -123,11 +124,11 @@
 
 
 @mixin experience-widget($company-name-palette, $job-palette, $company-desc-palette) {
-    $company-name-color: mat-color($company-name-palette, 500);
-    $company-desc-color: mat-color($company-desc-palette, 500);
-    $job-color: mat-color($job-palette, 500);
-    $card-actions-bg: mat-color($company-desc-palette, 100);
-    $card-actions-color: mat-color($company-desc-palette, 800);
+    $company-name-color: mat.get-color-from-palette($company-name-palette, 500);
+    $company-desc-color: mat.get-color-from-palette($company-desc-palette, 500);
+    $job-color: mat.get-color-from-palette($job-palette, 500);
+    $card-actions-bg: mat.get-color-from-palette($company-desc-palette, 100);
+    $card-actions-color: mat.get-color-from-palette($company-desc-palette, 800);
 
     .company-name{
         color: $company-name-color;

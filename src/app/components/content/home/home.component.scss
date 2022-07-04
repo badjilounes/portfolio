@@ -1,7 +1,8 @@
-@import '~@angular/material/theming';
+@use '@angular/material' as mat;
+@import '@angular/material/theming';
 
 .home-section{
-    background: url('~/assets/img/home-bg.jpg') no-repeat top center/cover;
+    background: url('/assets/img/home-bg.jpg') no-repeat top center/cover;
     position: relative;
     padding-bottom: 0;
 
@@ -17,14 +18,14 @@
         top: 0;
         width: 100%;
     }
-    
+
     .section-container{
         font-weight: 200;
         left: 0;
         position: absolute;
         top: 0;
         color: white;
-    
+
         h2{
             font-size: 3.56rem;
             line-height: 3.916rem;
@@ -39,7 +40,7 @@
                 margin: 30px 0 0;
             }
         }
-    
+
         *:not(span) {
             font-weight: 300;
             line-height: 150%;
@@ -52,7 +53,7 @@
 
 
 @mixin home-widget($theme){
-    $color: mat-color($theme, 500);
+    $color: mat.get-color-from-palette($theme, 500);
 
     .primary-underlined{
         border-bottom: 5px solid $color;
