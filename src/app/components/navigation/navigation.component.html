@@ -1,0 +1,18 @@
+<mat-sidenav-container class="sidenav-container mat-app-background" [ngClass]="{'dark-theme': (theme| async) === 'dark'}">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <app-menu [isHandset]="isHandset$| async"
+              [links]="headings" 
+              [exportLinks]="exportHeadings"
+              (menuClosed)="drawer.close()"></app-menu>
+  </mat-sidenav>
+  <mat-sidenav-content class="sidenav-content">
+    <app-toolbar class="toolbar" 
+        *ngIf="(isHandset$ | async)" 
+        (sidenavToggled)="drawer.toggle()"></app-toolbar>
+    <!-- Add Content Here -->
+    <app-content class="content" [isHandset]="isHandset$| async"></app-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

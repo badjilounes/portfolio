@@ -1,0 +1,24 @@
+@import '../../app/components/theme-selector/theme-selector.component';
+@import '../../app/components/content/home/home.component';
+@import '../../app/components/content/about/about.component';
+@import '../../app/components/content/contact/contact.component';
+@import '../../app/components/content/education/education.component';
+@import '../../app/components/content/experience/experience.component';
+@import '../../app/components/content/projects/projects.component';
+
+
+@mixin component-theme($light-palette, $dark-palette){
+    @include picker-theme($light-palette, $dark-palette);
+}
+
+@mixin card-theme($primary-palette, $accent-palette, $other-palette, $bg-palette) {
+    @include education-widget($primary-palette, $accent-palette);
+    @include experience-widget($primary-palette, $accent-palette, $other-palette);
+    @include projects-widget($primary-palette, $accent-palette, $bg-palette);
+}
+
+@mixin text-theme($primary-palette, $accent-palette) {
+    @include home-widget($primary-palette);
+    @include contact-widget($primary-palette);
+    @include about-widget($primary-palette, $accent-palette);
+}

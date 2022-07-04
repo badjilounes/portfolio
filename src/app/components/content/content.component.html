@@ -1,0 +1,28 @@
+<div class="container" #container>
+
+    <div scrollSpy class="scroll-container"
+        [spiedTags]="['APP-HOME', 'APP-ABOUT', 'APP-EXPERIENCE', 'APP-PROJECTS', 'APP-SKILLS', 'APP-AWARDS', 'APP-EDUCATION', 'APP-CONTACT']" 
+        (sectionChange)="onSectionChange($event)"
+        [style.height.px]="container.clientHeight"
+        [style.width.px]="container.clientWidth"> 
+        
+        <app-home id="home" class="section"></app-home>
+    
+        <app-about id="about" class="section"></app-about>
+        
+        <app-experience id="experience" class="section"></app-experience>
+        
+        <app-projects id="projects" class="section"></app-projects>
+        
+        <app-skills id="skills" class="section"></app-skills>
+                
+        <app-education id="education" class="section"></app-education>
+        
+        <app-contact id="contact" class="section" [isHandset]="isHandset"></app-contact>
+    </div>
+
+</div>
+
+
+
+

@@ -1,0 +1,17 @@
+
+@import '~@angular/material/theming';
+
+.mat-menu-item{
+    padding: 0;
+}
+
+.lang-picker-swatch{
+    position: relative;
+    width: 36px;
+    height: 36px;
+    margin: 6px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+

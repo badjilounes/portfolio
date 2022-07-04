@@ -1,0 +1,28 @@
+@import '~@angular/material/theming';
+@import './component-theme';
+@import './color-palette';
+
+@include mat-core();
+
+$primary: mat-palette($green-palette);
+$accent: mat-palette($brown-palette);
+$warn: mat-palette($mat-red);
+$theme: mat-light-theme($primary, $accent, $warn);
+
+@include angular-material-theme($theme);
+@include component-theme($green-palette, $black-palette);
+@include card-theme($primary, $accent, $mat-grey, $mat-light-theme-background);
+@include text-theme($green-palette, $brown-palette);
+
+.dark-theme {
+    color: $light-primary-text;
+    $dark-primary: mat-palette($black-palette);    
+    $dark-accent: mat-palette($mat-light-blue, A400, A100, A700);
+    $dark-warn: mat-palette($mat-red);
+    $dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+
+    @include angular-material-theme($dark-theme);
+    @include component-theme($green-palette, $black-palette);
+    @include card-theme($dark-accent, $mat-grey, $mat-grey, $mat-dark-theme-background);
+    @include text-theme($dark-primary, $dark-accent);
+}

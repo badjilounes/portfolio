@@ -1,0 +1,35 @@
+@import '~@angular/material/theming';
+
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+.sidenav-content{
+  background: url('~/assets/img/bg.png') repeat;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.toolbar{
+  position: relative;
+  height: 64px;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 0 auto;
+}
+
+.mat-app-background{
+  color: $dark-primary-text;
+}

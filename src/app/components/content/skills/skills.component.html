@@ -1,0 +1,16 @@
+<section class="skills-section">
+    <mat-toolbar class="content-toolbar" color="primary">{{'skills'| translate}}</mat-toolbar>
+
+    <div class="section-container">
+        <mat-card *ngFor="let item of items">
+            <mat-card-title>{{item.name | translate}}</mat-card-title>
+            <mat-card-content>
+                <div *ngFor="let skill of item.skills" class="card-content-item">
+                    <img [src]="'assets/img/skills/'+ skill.img + '.png'"/>
+                    {{skill.name}}
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    
+</section>
