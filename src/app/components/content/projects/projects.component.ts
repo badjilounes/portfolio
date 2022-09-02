@@ -13,7 +13,7 @@ export class ProjectsComponent implements OnInit {
       name: 'DZ Dialect App',
       description: ['Angular 14', 'Material', 'Ngrx', 'PWA'],
       descriptionTxt: 'projects.description.dz-dialect-app',
-      links: {online: 'https://dz-dialect-app.herokuapp.com', github: 'https://www.github.com/badjilounes/dz-dialect-app.git'}
+      links: {online: 'https://dz-dialect.bdsapp.fr', github: 'https://www.github.com/badjilounes/dz-dialect-app.git'}
     },
     {
       poster: 'assets/img/projects/blabla-movie.png',
