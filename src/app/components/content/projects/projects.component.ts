@@ -9,25 +9,25 @@ export class ProjectsComponent implements OnInit {
 
   items = [
     {
-      poster: 'assets/img/projects/dz-dialect-app.png',
+      poster: 'assets/img/projects/dz-dialect.png',
       name: 'DZ Dialect App',
-      description: ['Angular 14', 'Material', 'Ngrx', 'PWA'],
-      descriptionTxt: 'projects.description.dz-dialect-app',
-      links: {online: 'https://dz-dialect.bdsapp.fr', github: 'https://www.github.com/badjilounes/dz-dialect-app.git'}
+      description: ['Angular 15', 'Material', 'RXJS', 'NGRX', 'JWT', 'NestJS', 'DDD', 'TDD', 'Swagger', 'Social login'],
+      descriptionTxt: 'projects.description.dz-dialect',
+      links: { online: 'https://dz-dialect.bdsapp.fr', github: 'https://github.com/badjilounes/dz-dialect-app' }
     },
     {
       poster: 'assets/img/projects/blabla-movie.png',
       name: 'Blabla movie',
       description: ['Angular 6', 'Material', 'Rxjs debouncer', 'Open data api'],
       descriptionTxt: 'projects.description.blabla-movie',
-      links: {online: 'https://blablamovie.herokuapp.com', github: 'https://www.github.com/badjilounes/blabla-movie.git'}
+      links: { github: 'https://www.github.com/badjilounes/blabla-movie.git' }
     },
     {
       poster: 'assets/img/projects/prescriber.png',
       name: 'Prescriber',
       description: ['Angular 8', 'Material', 'NestJS', 'Swagger', 'JWT'],
       descriptionTxt: 'projects.description.prescriber',
-      links: {online: 'https://prescriber-front.herokuapp.com', github: 'https://www.github.com/badjilounes/exo1.git'}
+      links: { github: 'https://www.github.com/badjilounes/exo1.git' }
     }
   ];
 
