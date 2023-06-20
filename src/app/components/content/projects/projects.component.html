@@ -1,45 +1,72 @@
 <section class="projects-section">
-    <mat-toolbar class="content-toolbar" color="primary">{{'projects'| translate}}</mat-toolbar>
+  <mat-toolbar class="content-toolbar" color="primary">{{
+    "projects" | translate
+  }}</mat-toolbar>
 
-    <div class="section-container">
+  <div class="section-container">
+    <mat-card *ngFor="let item of items">
+      <img
+        mat-card-image
+        [src]="item.poster"
+        alt="Photo of blabla movie"
+        height="240px"
+      />
+      <mat-card-content>
+        <div class="project-title-container">
+          <div class="project-title">{{ item.name }}</div>
+          <button
+            mat-icon-button
+            aria-label="button see more information"
+            (click)="desc.style.display = 'block'; desc.style.top = '0'"
+          >
+            <mat-icon>more_vert</mat-icon>
+          </button>
+        </div>
+        <div class="project-description-text">
+          {{ item.descriptionTxt | translate }}
+        </div>
+      </mat-card-content>
 
-        <mat-card *ngFor="let item of items">
-            <img mat-card-image [src]="item.poster" alt="Photo of blabla movie" height="240px">
-            <mat-card-content>
-                <div class="project-title-container">
-                    <div class="project-title">{{item.name}}</div>
-                    <button mat-icon-button aria-label="button see more information" (click)="desc.style.display = 'block'; desc.style.top = '0';">
-                        <mat-icon>more_vert</mat-icon>
-                    </button>
-                </div>
-                <div class="project-description-text">{{item.descriptionTxt |translate}}</div>
-            </mat-card-content>
+      <div
+        class="project-card-description"
+        style="display: none; top: 250px"
+        #desc
+      >
+        <div class="project-description-title">
+          <div class="description-title">
+            {{ "projects.description.title" | translate }}
+          </div>
+          <button
+            mat-icon-button
+            aria-label="button close information"
+            (click)="desc.style.top = '250px'; desc.style.display = 'none'"
+          >
+            <mat-icon>close</mat-icon>
+          </button>
+        </div>
 
-            <div class="project-card-description" style="display: none; top: 250px" #desc>
-                <div class="project-description-title">
-                    <div class="description-title">{{'projects.description.title' | translate}}</div>
-                    <button mat-icon-button aria-label="button close information" (click)="desc.style.top = '250px'; desc.style.display = 'none'; ">
-                        <mat-icon>close</mat-icon>
-                    </button>    
-                </div>
-                
-                <div class="description-list">
-                    <ul>
-                        <li *ngFor="let description of item.description">{{description}}</li>
-                    </ul>
-                </div>
+        <div class="description-list">
+          <ul>
+            <li *ngFor="let description of item.description">
+              {{ description }}
+            </li>
+          </ul>
+        </div>
 
-                <div class="description-action">
-                    <a mat-mini-fab [href]="item.links.online" target="_blank">
-                        <mat-icon>open_in_new</mat-icon>
-                    </a>
-                    <a mat-mini-fab [href]="item.links.github" target="_blank">
-                        <mat-icon [svgIcon]="'github'"></mat-icon>
-                    </a>
-                </div>
-            </div>
-        </mat-card>
-        
-    </div>
-
+        <div class="description-action">
+          <a
+            mat-mini-fab
+            *ngIf="item.links.online"
+            [href]="item.links.online"
+            target="_blank"
+          >
+            <mat-icon>open_in_new</mat-icon>
+          </a>
+          <a mat-mini-fab [href]="item.links.github" target="_blank">
+            <mat-icon [svgIcon]="'github'"></mat-icon>
+          </a>
+        </div>
+      </div>
+    </mat-card>
+  </div>
 </section>

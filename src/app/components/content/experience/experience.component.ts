@@ -12,14 +12,33 @@ import { LanguageService } from 'src/app/services/languauge/language.service';
 export class ExperienceComponent implements OnInit {
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-  .pipe(
-    map(result => result.matches),
-    shareReplay()
-  );
+    .pipe(
+      map(result => result.matches),
+      shareReplay()
+    );
 
   items = [
     {
-      companyName: 'Agicap',
+      companyName: 'GLOBAZ',
+      logo: 'globaz',
+      job: 'experience.job.globaz',
+      companyDescription: 'experience.job.globaz.description',
+      tasks: [
+        'experience.job.globaz.task1',
+        'experience.job.globaz.task2',
+        'experience.job.globaz.task3',
+        'experience.job.globaz.task4',
+        'experience.job.globaz.task5',
+        'experience.job.globaz.task6',
+        'experience.job.globaz.task7',
+        'experience.job.globaz.task8',
+        'experience.job.globaz.task9',
+      ],
+      dates: { start: '1667408668000', end: '1682870668000' },
+      location: 'Genève'
+    },
+    {
+      companyName: 'AGICAP',
       logo: 'agicap',
       job: 'experience.job.agicap',
       companyDescription: 'experience.job.agicap.description',
@@ -34,7 +53,7 @@ export class ExperienceComponent implements OnInit {
         'experience.job.agicap.task8',
         'experience.job.agicap.task9',
       ],
-      dates: {start: '1638179500000', end: '1661935900000'},
+      dates: { start: '1637427829000', end: '1661011344000' },
       location: 'Lyon'
     },
     {
@@ -54,7 +73,7 @@ export class ExperienceComponent implements OnInit {
         'experience.job.louis-vuitton.task9',
         'experience.job.louis-vuitton.task10',
       ],
-      dates: {start: '1574636400000', end: '1635721200000'},
+      dates: { start: '1574636400000', end: '1635721200000' },
       location: 'Lyon'
     },
     {
@@ -66,7 +85,7 @@ export class ExperienceComponent implements OnInit {
         'experience.job.icoges.task1',
         'experience.job.icoges.task2'
       ],
-      dates: {start: '1540573611000', end: '1574788011000'},
+      dates: { start: '1540573611000', end: '1574788011000' },
       location: 'Lyon'
     },
     {
@@ -85,7 +104,7 @@ export class ExperienceComponent implements OnInit {
         'experience.job.mygladys.task8',
         'experience.job.mygladys.task9',
       ],
-      dates: {start: '1545844011000', end: '1564160811000'},
+      dates: { start: '1545844011000', end: '1564160811000' },
       location: 'Lyon'
     },
     {
@@ -105,7 +124,7 @@ export class ExperienceComponent implements OnInit {
         'experience.job.ubilab.task9',
         'experience.job.ubilab.task10',
       ],
-      dates: {start: '1474909611000', end: '1545844011000'},
+      dates: { start: '1474909611000', end: '1545844011000' },
       location: 'Lyon'
     },
     {
@@ -122,15 +141,15 @@ export class ExperienceComponent implements OnInit {
         'experience.job.trainme.task6',
         'experience.job.trainme.task7',
       ],
-      dates: {start: '1456506411000', end: '1469552811000'},
+      dates: { start: '1456506411000', end: '1469552811000' },
       location: 'Lyon'
     },
   ];
 
-  locale: Observable<'fr-FR'|'en-US'> = this.langSrv.getLanguage();
+  locale: Observable<'fr-FR' | 'en-US'> = this.langSrv.getLanguage();
 
   constructor(private readonly breakpointObserver: BreakpointObserver, private readonly langSrv: LanguageService) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
 }
